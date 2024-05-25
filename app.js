@@ -169,6 +169,6 @@ abtn6.addEventListener("click", function () {
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6
+    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6;
     tg.sendData(data);
 });
