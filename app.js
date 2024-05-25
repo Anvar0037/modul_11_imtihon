@@ -112,60 +112,60 @@ abtn4.addEventListener("click", function () {
 });
 
 
-
-count5 = document.getElementById("count5");
-rbtn5 = document.getElementById("rbtn5");
-abtn5 = document.getElementById("abtn5");
-let item5 = " ";
-let n_count5 = 0;
-rbtn5.addEventListener("click", function () {
-    if (n_count5 > 0) {
-        count5.innerText = n_count5 -= 1;
-    }
-
-    count5.style.display = "inline-block";
-    item5 = "Mikro Isitgich/100/" + count5.innerText;
-
-    tg.MainButton.setText("оплата");
-    tg.MainButton.show();
-});
-
-
-abtn5.addEventListener("click", function () {
-    count5.innerText = n_count5 += 1;
-    count5.style.display = "inline-block";
-    item5 = "Mikro Isitgich/100/" + count5.innerText;
-
-    tg.MainButton.setText("оплата");
-    tg.MainButton.show();
-});
-
-count6 = document.getElementById("count6");
-rbtn6 = document.getElementById("rbtn6");
-abtn6 = document.getElementById("abt6");
-let item6 = " ";
-let n_count6 = 0;
-rbtn6.addEventListener("click", function () {
-    if (n_count6 > 0) {
-        count6.innerText = n_count6 -= 1;
-    }
-
-    count6.style.display = "inline-block";
-    item6 = "Gaz-Plita/700/" + count6.innerText;
-
-    tg.MainButton.setText("оплата");
-    tg.MainButton.show();
-});
-
-
-abtn6.addEventListener("click", function () {
-    count6.innerText = n_count6 += 1;
-    count6.style.display = "inline-block";
-    item6 = "Gaz-Plita/700/" + count6.innerText;
-
-    tg.MainButton.setText("оплата");
-    tg.MainButton.show();
-});
+//
+// count5 = document.getElementById("count5");
+// rbtn5 = document.getElementById("rbtn5");
+// abtn5 = document.getElementById("abtn5");
+// let item5 = " ";
+// let n_count5 = 0;
+// rbtn5.addEventListener("click", function () {
+//     if (n_count5 > 0) {
+//         count5.innerText = n_count5 -= 1;
+//     }
+//
+//     count5.style.display = "inline-block";
+//     item5 = "Mikro Isitgich/100/" + count5.innerText;
+//
+//     tg.MainButton.setText("оплата");
+//     tg.MainButton.show();
+// });
+//
+//
+// abtn5.addEventListener("click", function () {
+//     count5.innerText = n_count5 += 1;
+//     count5.style.display = "inline-block";
+//     item5 = "Mikro Isitgich/100/" + count5.innerText;
+//
+//     tg.MainButton.setText("оплата");
+//     tg.MainButton.show();
+// });
+//
+// count6 = document.getElementById("count6");
+// rbtn6 = document.getElementById("rbtn6");
+// abtn6 = document.getElementById("abt6");
+// let item6 = " ";
+// let n_count6 = 0;
+// rbtn6.addEventListener("click", function () {
+//     if (n_count6 > 0) {
+//         count6.innerText = n_count6 -= 1;
+//     }
+//
+//     count6.style.display = "inline-block";
+//     item6 = "Gaz-Plita/700/" + count6.innerText;
+//
+//     tg.MainButton.setText("оплата");
+//     tg.MainButton.show();
+// });
+//
+//
+// abtn6.addEventListener("click", function () {
+//     count6.innerText = n_count6 += 1;
+//     count6.style.display = "inline-block";
+//     item6 = "Gaz-Plita/700/" + count6.innerText;
+//
+//     tg.MainButton.setText("оплата");
+//     tg.MainButton.show();
+// });
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
