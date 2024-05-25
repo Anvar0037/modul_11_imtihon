@@ -161,7 +161,7 @@ rbtn6.addEventListener("click", function () {
 abtn6.addEventListener("click", function () {
     count6.innerText = n_count6 += 1;
     count6.style.display = "inline-block";
-    item6 = "Gaz-Plita/700/" + count4.innerText;
+    item6 = "Gaz-Plita/700/" + count6.innerText;
 
     tg.MainButton.setText("оплата");
     tg.MainButton.show();
