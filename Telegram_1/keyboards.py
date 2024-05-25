@@ -1,6 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, WebAppInfo, InlineKeyboardMarkup, InlineKeyboardButton
 
-web_app = WebAppInfo(url="https://anvar0037.github.io/modul_11.github.io/")
+web_app = WebAppInfo(url="https://anvar0037.github.io/modul_11_imtihon/")
 
 
 apple_kb = ReplyKeyboardMarkup(keyboard=[
