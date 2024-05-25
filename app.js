@@ -48,8 +48,7 @@ rbtn2.addEventListener("click", function () {
 });
 
 
-
-abtn2.addEventListener("click", function (){
+abtn2.addEventListener("click", function () {
     count2.innerText = n_count2 += 1;
     count2.style.display = "inline-block";
     item2 = "Redmi/300/" + count2.innerText;
@@ -76,8 +75,7 @@ rbtn3.addEventListener("click", function () {
 });
 
 
-
-abtn3.addEventListener("click", function (){
+abtn3.addEventListener("click", function () {
     count3.innerText = n_count3 += 1;
     count3.style.display = "inline-block";
     item3 = "Samsung/300/" + count3.innerText;
@@ -104,8 +102,7 @@ rbtn4.addEventListener("click", function () {
 });
 
 
-
-abtn4.addEventListener("click", function (){
+abtn4.addEventListener("click", function () {
     count4.innerText = n_count4 += 1;
     count4.style.display = "inline-block";
     item4 = "Xolodilnik/700/" + count4.innerText;
@@ -116,7 +113,62 @@ abtn4.addEventListener("click", function (){
 
 
 
+count5 = document.getElementById("count5");
+rbtn5 = document.getElementById("rbtn5");
+abtn5 = document.getElementById("abtn5");
+let item5 = " ";
+let n_count5 = 0;
+rbtn5.addEventListener("click", function () {
+    if (n_count5 > 0) {
+        count5.innerText = n_count5 -= 1;
+    }
+
+    count5.style.display = "inline-block";
+    item5 = "Mikro Isitgich/100/" + count5.innerText;
+
+    tg.MainButton.setText("оплата");
+    tg.MainButton.show();
+});
+
+
+abtn5.addEventListener("click", function () {
+    count5.innerText = n_count5 += 1;
+    count5.style.display = "inline-block";
+    item5 = "Mikro Isitgich/100/" + count5.innerText;
+
+    tg.MainButton.setText("оплата");
+    tg.MainButton.show();
+});
+
+count6 = document.getElementById("count6");
+rbtn6 = document.getElementById("rbtn6");
+abtn6 = document.getElementById("abt6");
+let item6 = " ";
+let n_count6 = 0;
+rbtn6.addEventListener("click", function () {
+    if (n_count6 > 0) {
+        count6.innerText = n_count6 -= 1;
+    }
+
+    count6.style.display = "inline-block";
+    item6 = "Gaz-Plita/700/" + count6.innerText;
+
+    tg.MainButton.setText("оплата");
+    tg.MainButton.show();
+});
+
+
+abtn6.addEventListener("click", function () {
+    count6.innerText = n_count6 += 1;
+    count6.style.display = "inline-block";
+    item6 = "Gaz-Plita/700/" + count4.innerText;
+
+    tg.MainButton.setText("оплата");
+    tg.MainButton.show();
+});
+
+
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    data = item1 + "|" + item2 +  "|" + item3 + "|" + item4
+    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6
     tg.sendData(data);
 });
