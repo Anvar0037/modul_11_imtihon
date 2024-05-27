@@ -318,7 +318,7 @@ abtn5.addEventListener("click", function () {
 
 
 count6 = document.getElementById("count6");
-rbtn6= document.getElementById("rbtn6");
+rbtn6 = document.getElementById("rbtn6");
 abtn6 = document.getElementById("abtn6");
 let item6 = "";
 let n_count6 = 0;
@@ -484,7 +484,7 @@ abtn11.addEventListener("click", function () {
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6 + "|" + item7 +"|" + item8
-    + "|" + item9 + "|" + item10 + "|" + item11
+    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6 + "|" + item7 + "|" + item8
+        + "|" + item9 + "|" + item10 + "|" + item11
     tg.sendData(data);
 });
