@@ -356,7 +356,7 @@ rbtn7.addEventListener("click", function () {
     }
 
     count7.style.display = "inline-block";
-    item7 = "Gaz-Plita/7000/" + count7.innerText;
+    item7 = "Konditsoner/9000/" + count7.innerText;
 
     tg.MainButton.setText("Оплата");
     tg.MainButton.show();
@@ -366,7 +366,7 @@ rbtn7.addEventListener("click", function () {
 abtn7.addEventListener("click", function () {
     count7.innerText = n_count7 += 1;
     count7.style.display = "inline-block";
-    item7 = "Gaz-Plita/7000/" + count7.innerText;
+    item7 = "Konditsoner/9000/" + count7.innerText;
 
     tg.MainButton.setText("Оплата");
     tg.MainButton.show();
@@ -384,7 +384,7 @@ rbtn8.addEventListener("click", function () {
     }
 
     count8.style.display = "inline-block";
-    item8 = "Gaz-Plita/7000/" + count8.innerText;
+    item8 = "Plisos/1000/" + count8.innerText;
 
     tg.MainButton.setText("Оплата");
     tg.MainButton.show();
@@ -394,7 +394,7 @@ rbtn8.addEventListener("click", function () {
 abtn8.addEventListener("click", function () {
     count8.innerText = n_count8 += 1;
     count8.style.display = "inline-block";
-    item8 = "Gaz-Plita/7000/" + count8.innerText;
+    item8 = "Plisos/1000/" + count8.innerText;
 
     tg.MainButton.setText("Оплата");
     tg.MainButton.show();
