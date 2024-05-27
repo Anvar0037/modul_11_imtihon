@@ -39,7 +39,7 @@ async def get_btn(msg: Message):
     print(products)
     await bot.send_invoice(
         chat_id=msg.chat.id,
-        title="Оплата",
+        title="To'lov",
         description="Оплата через Telegram bot",
         provider_token=PROVIDER_TOKEN,
         currency="UZS",
