@@ -318,7 +318,7 @@ abtn5.addEventListener("click", function () {
 
 
 count6 = document.getElementById("count6");
-rbtn6 = document.getElementById("rbtn6");
+rbtn6= document.getElementById("rbtn6");
 abtn6 = document.getElementById("abtn6");
 let item6 = "";
 let n_count6 = 0;
@@ -400,91 +400,7 @@ abtn8.addEventListener("click", function () {
     tg.MainButton.show();
 });
 
-
-count9 = document.getElementById("count9");
-rbtn9 = document.getElementById("rbtn9");
-abtn9 = document.getElementById("abtn9");
-let item9 = "";
-let n_count9 = 0;
-rbtn9.addEventListener("click", function () {
-    if (n_count9 > 0) {
-        count9.innerText = n_count9 -= 1;
-    }
-
-    count9.style.display = "inline-block";
-    item9 = "Kir-Mashina/6000/" + count9.innerText;
-
-    tg.MainButton.setText("Оплата");
-    tg.MainButton.show();
-});
-
-
-abtn9.addEventListener("click", function () {
-    count9.innerText = n_count9 += 1;
-    count9.style.display = "inline-block";
-    item9 = "Kir-Mashina/6000/" + count9.innerText;
-
-    tg.MainButton.setText("Оплата");
-    tg.MainButton.show();
-});
-
-count10 = document.getElementById("count10");
-rbtn10 = document.getElementById("rbtn10");
-abtn10 = document.getElementById("abtn10");
-let item10 = "";
-let n_count10 = 0;
-rbtn10.addEventListener("click", function () {
-    if (n_count10 > 0) {
-        count10.innerText = n_count10 -= 1;
-    }
-
-    count10.style.display = "inline-block";
-    item10 = "Duxovka/1000/" + count10.innerText;
-
-    tg.MainButton.setText("Оплата");
-    tg.MainButton.show();
-});
-
-
-abtn10.addEventListener("click", function () {
-    count10.innerText = n_count10 += 1;
-    count10.style.display = "inline-block";
-    item10 = "Duxovka/1000/" + count10.innerText;
-
-    tg.MainButton.setText("Оплата");
-    tg.MainButton.show();
-});
-
-count11 = document.getElementById("count11");
-rbtn11 = document.getElementById("rbtn11");
-abtn11 = document.getElementById("abtn11");
-let item11 = "";
-let n_count11 = 0;
-rbtn11.addEventListener("click", function () {
-    if (n_count11 > 0) {
-        count11.innerText = n_count11 -= 1;
-    }
-
-    count11.style.display = "inline-block";
-    item11 = "Notebook/16000/" + count11.innerText;
-
-    tg.MainButton.setText("Оплата");
-    tg.MainButton.show();
-});
-
-
-abtn11.addEventListener("click", function () {
-    count11.innerText = n_count11 += 1;
-    count11.style.display = "inline-block";
-    item11 = "Notebook/16000/" + count11.innerText;
-
-    tg.MainButton.setText("Оплата");
-    tg.MainButton.show();
-});
-
-
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6 + "|" + item7 + "|" + item8
-        + "|" + item9 + "|" + item10 + "|" + item11
+    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6 + "|" + item7 +"|" + item8
     tg.sendData(data);
 });
