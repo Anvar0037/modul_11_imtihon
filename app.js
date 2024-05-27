@@ -310,7 +310,7 @@ rbtn5.addEventListener("click", function () {
 abtn4.addEventListener("click", function () {
     count5.innerText = n_count5 += 1;
     count5.style.display = "inline-block";
-    item5 = "Xolodilnik/7000/" + count5.innerText;
+    item5 = "Mikavalnovka/1000/" + count5.innerText;
 
     tg.MainButton.setText("Оплата");
     tg.MainButton.show();
