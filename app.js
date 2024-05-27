@@ -5,7 +5,7 @@ tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#FC3005";
 
 // Bosh tugmani boshlang'ich holatda yashirish
-tg.MainButton.setText("To'lov");
+tg.MainButton.setText("Оплата");
 tg.MainButton.hide();
 
 // -----------------------1--------------------------
@@ -241,39 +241,29 @@ rbtn10.addEventListener("click", function () {
 
 // -------------------11-------------------
 
-let count11 = document.getElement
-
-
-count11 = document.getElementById("count11");
-rbtn11 = document.getElementById("rbtn11");
-abtn11 = document.getElementById("abtn11");
+let count11 = document.getElementById("count11");
+let rbtn11 = document.getElementById("rbtn11");
+let abtn11 = document.getElementById("abtn11");
 let item11 = "";
 let n_count11 = 0;
-rbtn11.addEventListener("click", function () {
-    if (n_count11 > 0) {
-        count11.innerText = n_count11 -= 1;
-    }
-
-    count11.style.display = "inline-block";
-    item11 = "Notebook/16000/" + count11.innerText;
-
-    tg.MainButton.setText("Оплата");
-    tg.MainButton.show();
-});
-
 
 abtn11.addEventListener("click", function () {
     count11.innerText = n_count11 += 1;
     count11.style.display = "inline-block";
     item11 = "Notebook/16000/" + count11.innerText;
-
-    tg.MainButton.setText("Оплата");
+    tg.MainButton.show();
+});
+rbtn11.addEventListener("click", function () {
+    if (n_count11 > 0) {
+        count11.innerText = n_count11 -= 1;
+    }
+    count11.style.display = "inline-block";
+    item11 = "Notebook/16000/" + count11.innerText;
     tg.MainButton.show();
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6 + "|" + item7 + "|" + item8 + "|" + item9
-        + "|" + item10 + "|" + item11
+    let data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6 + "|" + item7 + "|" + item8 + "|" + item9 + "|" + item10 + "|" + item11;
     tg.sendData(data);
 });
 
