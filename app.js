@@ -289,6 +289,33 @@ abtn4.addEventListener("click", function () {
     tg.MainButton.show();
 });
 
+count5 = document.getElementById("count5");
+rbtn5 = document.getElementById("rbtn5");
+abtn5 = document.getElementById("abtn5");
+let item5 = " ";
+let n_count5 = 0;
+rbtn5.addEventListener("click", function () {
+    if (n_count5 > 0) {
+        count5.innerText = n_count5 -= 1;
+    }
+
+    count5.style.display = "inline-block";
+    item5 = "Mikro Isitgich/100/" + count5.innerText;
+
+    tg.MainButton.setText("оплата");
+    tg.MainButton.show();
+});
+
+
+abtn5.addEventListener("click", function () {
+    count5.innerText = n_count5 += 1;
+    count5.style.display = "inline-block";
+    item5 = "Mikro Isitgich/100/" + count5.innerText;
+
+    tg.MainButton.setText("оплата");
+    tg.MainButton.show();
+});
+
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     data = item1 + "|" + item2 + "|" + item3 + "|" + item4
