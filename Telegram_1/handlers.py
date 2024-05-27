@@ -1,9 +1,10 @@
 import os
 from aiogram import Dispatcher, F, Bot
 from aiogram.filters import CommandStart, Command
-from aiogram.types import Message, LabeledPrice, PreCheckoutQuery
+from aiogram.types import Message, LabeledPrice, PreCheckoutQuery, InputFile
 from keyboards import apple_kb, buy_ikb
 from dotenv import load_dotenv
+
 
 load_dotenv()
 PROVIDER_TOKEN = os.getenv('PROVIDER_TOKEN')
@@ -31,7 +32,7 @@ async def get_btn(msg: Message):
             quantity = product_data[i].split('/')[2]
             product = {
                 "title": title,
-                "price": float(price),
+                "price": int(price),
                 "quantity": int(quantity)
             }
             products[i] = product
@@ -39,13 +40,17 @@ async def get_btn(msg: Message):
     await bot.send_invoice(
         chat_id=msg.chat.id,
         title="Оплата",
-        description="Оплата через Tg bot",
+        description="Оплата через Telegram bot",
         provider_token=PROVIDER_TOKEN,
         currency="UZS",
         payload="Ichki malumot",
         prices=[LabeledPrice(label=f"{product['title']}({product['quantity']})",
-                             amount=(product["price"] * product["quantity"]) * 100)
-                for product in products.values()],)
+                             amount=(product['price'] * product['quantity']) * 100)
+                for product in products.values()],
+        max_tip_amount=50000000,
+        suggested_tip_amounts=[100000, 300000, 500000, 600000]
+
+    )
 
 
 @dp.pre_checkout_query()
@@ -55,5 +60,5 @@ async def pre_checkout(query: PreCheckoutQuery):
 
 @dp.message(F.func(lambda msg: msg.successful_payment if msg.successful_payment else None))
 async def successful_payment(msg: Message):
-    await msg.answer("Tolov uchun raxmat!")
-
+    print(msg.successful_payment)
+    await msg.answer("To'lov uchun raxmat!")
