@@ -317,7 +317,35 @@ abtn5.addEventListener("click", function () {
 });
 
 
+count6 = document.getElementById("count6");
+rbtn6= document.getElementById("rbtn6");
+abtn6 = document.getElementById("abtn6");
+let item6 = "";
+let n_count6 = 0;
+rbtn6.addEventListener("click", function () {
+    if (n_count6 > 0) {
+        count6.innerText = n_count6 -= 1;
+    }
+
+    count6.style.display = "inline-block";
+    item6 = "Gaz-Plita/7000/" + count6.innerText;
+
+    tg.MainButton.setText("Оплата");
+    tg.MainButton.show();
+});
+
+
+abtn6.addEventListener("click", function () {
+    count6.innerText = n_count6 += 1;
+    count6.style.display = "inline-block";
+    item6 = "Gaz-Plita/7000/" + count6.innerText;
+
+    tg.MainButton.setText("Оплата");
+    tg.MainButton.show();
+});
+
+
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5
+    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6
     tg.sendData(data);
 });
