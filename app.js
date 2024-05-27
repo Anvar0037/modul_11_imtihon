@@ -516,6 +516,6 @@ rbtn11.addEventListener("click", function () {
     handleButtonDecrement(count11, n_count11, "Notebook/16000");
 });
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    data = item1 + "|" + item2 + "|" + item3 + "|" + item4 + "|" + item5 + "|" + item6 + "|" + item7
+    let data = `${item1}|${item2}|${item3}|${item4}|${item5}|${item6}|${item7}|${item8}|${item9}|${item10}|${item11}`;
     tg.sendData(data);
 });
