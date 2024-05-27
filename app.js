@@ -307,7 +307,7 @@ rbtn5.addEventListener("click", function () {
 });
 
 
-abtn4.addEventListener("click", function () {
+abtn5.addEventListener("click", function () {
     count5.innerText = n_count5 += 1;
     count5.style.display = "inline-block";
     item5 = "Mikavalnovka/1000/" + count5.innerText;
